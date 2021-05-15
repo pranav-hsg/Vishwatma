@@ -1,1 +1,15 @@
-<p>slider works!</p>
+
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+>
+
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+
+<img src="https://issani.co.in/{{slide.img }}" alt="" width="170px" >
+
+<div class="title"> {{slide.title}} </div>
+
+</div>
+
+</ngx-slick-carousel>

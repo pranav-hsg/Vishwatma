@@ -12,6 +12,7 @@ import { PostComponent } from './routes/post/post.component';
 import { SearchComponent } from './components/search/search.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MaterialModule } from './material/material/material.module'
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { MaterialModule } from './material/material/material.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
