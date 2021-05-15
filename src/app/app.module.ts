@@ -11,7 +11,7 @@ import { HomeComponent } from './routes/home/home.component';
 import { PostComponent } from './routes/post/post.component';
 import { SearchComponent } from './components/search/search.component';
 import { BannerComponent } from './components/banner/banner.component';
-
+import { MaterialModule } from './material/material/material.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { BannerComponent } from './components/banner/banner.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
