@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Vishwatma"
+  "defaultProject": "Vishwatma",
+  "cli": {
+    "analytics": false
+  }
 }
