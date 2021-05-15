@@ -9,6 +9,8 @@ import { ImageloaderComponent } from './components/imageloader/imageloader.compo
 import { CategoryComponent } from './routes/category/category.component';
 import { HomeComponent } from './routes/home/home.component';
 import { PostComponent } from './routes/post/post.component';
+import { SearchComponent } from './components/search/search.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PostComponent } from './routes/post/post.component';
     ImageloaderComponent,
     CategoryComponent,
     HomeComponent,
-    PostComponent
+    PostComponent,
+    SearchComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
