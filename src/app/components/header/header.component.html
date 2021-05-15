@@ -1,1 +1,145 @@
-<p>header works!</p>
+<div  fxFlex='100' class='div div__header mat-typography' fxLayout = 'row' fxLayoutAlign="initial center" >
+
+    <!-- these are all heading text -->
+    <h2 class=' h2__logotext headline'>Vishwatma</h2>
+    <div fxHide.lt-sm fxHide.sm  fxLayout = 'row' fxLayoutAlign="initial center" >
+      <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+              Home
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+
+              <a  ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">
+              Template
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu">
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent3">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+              Features
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent4">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown4" role="button">
+             Learn
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown4" class="dropdown-menu">
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+            </div>
+        
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button fxHide.lt-sm fxHide.sm  class="secondary_color primary_font btn btn__login" mat-stroked-button>Login</button>
+    <button fxHide.lt-sm fxHide.sm secondary_color mat-flat-button class='primary_color primary_font btn'>Sign Up</button>
+    <button style="margin-left: auto;" #menu (click)='toggleMenu()' fxHide.gt-sm  class='btn__menuicon'>
+        <img class="menuIcon" src=".\assets\icons\menu.svg" alt="">
+    </button>
+</div>
+
+<div  *ngIf="showMenu" fxHide.gt-sm  >
+
+
+    <div #bgDark class="bgDark" >
+
+        
+    </div>
+<div  class="sideMenu" fxLayout = 'column' fxLayoutAlign="initial center" >
+    
+    <div   fxLayout = 'column' fxLayoutAlign="start start" >
+        <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent1">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                Home
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+  
+                <a  ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">
+                Template
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu">
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent3">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+                Features
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-collapse  secondary_color" [class.collapse]="collapsed" id="navbarContent4">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown4" role="button">
+               Learn
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown4" class="dropdown-menu">
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+              </div>
+          
+            </li>
+          </ul>
+        </div>
+      </div>
+</div>
+
+
+</div>
+

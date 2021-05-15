@@ -1,0 +1,27 @@
+.div__bannerContainer{
+    margin-top:32px;
+    // background-color:red;
+    height:344px;
+    padding: 0 32px;
+}
+.div__banner{
+    height:100%;
+    border-radius: 10px;
+    background-color:white;
+    overflow: hidden;
+    background-attachment: fixed;
+    // background-position: center;
+    background-size: cover;
+}
+.div__transparent{
+    color: white;
+    background-color: rgb(0 0 0 / 20%);
+    // border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    & .mat-display-2{
+        letter-spacing:1.4px;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+    }
+}

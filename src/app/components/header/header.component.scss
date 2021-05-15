@@ -1,0 +1,71 @@
+
+.div__header{
+    height:60px;
+    padding:6px;
+    // Give it a little bit shadow
+    -webkit-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
+-moz-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
+box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
+    & .btn__login{
+        margin-left:auto;
+    }
+}
+.btn{
+    height:32px;
+    margin: 0 6px;
+}
+.secondary_color{
+    color:rgb(56, 60, 65);
+     
+}
+.primary_color{
+    background-color:rgb(125, 42, 232);
+    color:white;  
+}
+.primary_font{
+    font-weight :600;
+    font: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-stretch: 100%;
+    // letter-spacing:1px;
+    line-height:32px;
+}
+.h2__logotext{
+    margin:0 10px 0 0;
+}
+.navbar-collapse{
+    all:unset; 
+    margin:10px;
+}
+.navbar-collapse a{
+    width:unset;
+    color:rgb(14, 19, 24);
+    &:active{  
+        background-color:rgb(230, 230, 230);
+    }
+}
+.btn__menuicon{
+    margin: 0 10 0 10;
+    border:0;
+    background-color: 0;
+    font-size:16px;
+}
+.menuIcon{
+    background-color:white;
+}
+.sideMenu{
+    min-height:calc(100%);
+    position: fixed;
+    background-color:white;
+    right:0;
+    width: 240px;
+    z-index: 100;
+}
+.bgDark{
+    position:fixed;
+    left:0;
+    width: calc(100%);
+    height: calc(100%);
+    background-color:rgba(47, 47, 47, 0.281);
+    z-index: 50;
+}
