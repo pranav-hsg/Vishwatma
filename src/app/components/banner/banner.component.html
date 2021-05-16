@@ -3,7 +3,8 @@
        <div  fxLayout = 'column' fxLayoutAlign="center center" class="div div__transparent">
             <h1 class='mat-display-2'>Free templates</h1>
             <div class='searchBox__container'>
-                <input class="search__input" type="text" placeholder="Search">
+                <input (keyup)="onKeyPress($event)" class="search__input" type="text" placeholder="Search">
+                <button (click)="search($event)"  class='searchBtn'><img class="searchIcon" src=".\assets\icons\search.png" alt=""></button>
             </div>
             <p>Explore all thousands of fonts</p>
        </div>
