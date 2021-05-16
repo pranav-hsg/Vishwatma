@@ -1,5 +1,6 @@
 
 .div__header{
+    user-select: none;
     height:60px;
     padding:6px;
     // Give it a little bit shadow
@@ -31,6 +32,13 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     line-height:32px;
 }
 .h2__logotext{
+    border:solid 2px #7d2ae8;
+    border-radius: 40px;
+    // line-height: 100px;
+    background-color: white;           
+    color: #7d2ae8;
+    padding:0 6px;
+    letter-spacing: 1;
     margin:0 10px 0 0;
 }
 .navbar-collapse{
@@ -51,6 +59,7 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     font-size:16px;
 }
 .menuIcon{
+    user-select: none;
     background-color:white;
 }
 .sideMenu{
@@ -68,4 +77,37 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     height: calc(100%);
     background-color:rgba(47, 47, 47, 0.281);
     z-index: 50;
+}
+.btn__closeIcon{
+    all:unset;
+    user-select: none;
+    cursor: pointer;
+    position:absolute;
+    left:0;
+    top:0; 
+}
+div.menu{
+    visibility: hidden;
+    opacity: 0;
+    
+}
+div.showMenu{
+    visibility:visible;
+    opacity: 1;
+    transition: all 1s;  
+}
+.horizontalRow{
+    margin:0;
+    width:200px;
+    height: 1px;
+    // background: rgb(2,0,36);
+    // background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(125,42,232,1) 35%, rgba(0,212,255,1) 100%);
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+div.sideMenu > div > div.navbar-collapse{
+    user-select: none;
+    margin-left:70px;
+    font-weight: 600;
+    // /margin-right:auto;
 }
