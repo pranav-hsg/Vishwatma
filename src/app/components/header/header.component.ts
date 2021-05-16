@@ -6,7 +6,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild("bgDark") bgEl: ElementRef;
+  @ViewChild("bgDark") bgEl: ElementRef | undefined;
   constructor() { }
   collapsed: boolean = false;
   showMenu = false;
@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
   @HostListener('document:click', ['$event'])
   onDocumentClick(e: MouseEvent) {
-    if(this.bgEl.nativeElement.contains(e.target)){
+    if(this.bgEl && this.bgEl.nativeElement.contains(e.target)){
       this.showMenu = !this.showMenu
     }
   }
