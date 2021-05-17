@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild("bgDark") bgEl: ElementRef | undefined;
   constructor() { }
   collapsed: boolean = false;
-  showMenu = true;
+  showMenu = false;
   menus =  [
     {
       'heading':'Home',
