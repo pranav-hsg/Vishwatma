@@ -1,0 +1,29 @@
+.div__container {
+ 
+  // text-align: center;
+  // align-items: center;
+  padding: 0 20px;
+  // background-color:rgba(0, 0, 0, 0.034);
+  & .author__img{
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    background-size: cover;
+  }
+  & .div__postInfo > *{
+    margin: 10px 0;
+  }
+  
+}
+
+.div__imageContainer{
+  // background-color:rgba(0, 0, 0, 0.034);
+  width:100%;
+
+  & .main__image{
+
+    height:50vh;
+  }
+  
+}

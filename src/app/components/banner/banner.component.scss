@@ -5,6 +5,7 @@
     padding: 0 32px;
 }
 .div__banner{
+    position:relative;
     height:100%;
     border-radius: 10px;
     background-color:white;
@@ -50,13 +51,13 @@
     &__input {
         width: 100%;
         padding: 12px 24px;
-
+        padding-right: 40px;
         // background-color: rgba(255, 255, 255, 0.438);
         transition: transform 250ms ease-in-out;
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
         line-height: 18px;
-        
-        color: white;
         border-radius: 50px;
 
         background-color: transparent;
@@ -73,16 +74,11 @@
         backface-visibility: hidden;
         transform-style: preserve-3d;
         transition:outline 2s ease-in;
+        color:black;
         &::placeholder {
-            color: white;
+            color: black;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-        }
-        
-        &:hover,
-        &:focus {  
-           
-            color:black;
         }
         &:focus{
             border-radius:0;
@@ -91,4 +87,6 @@
         }
     }
 }
-
+.div__mag1{
+    
+}

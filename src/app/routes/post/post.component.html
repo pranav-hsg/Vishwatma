@@ -1,1 +1,23 @@
-<p>post works!</p>
+<div fxLayout = 'row wrap'   fxFlex='100' fxLayoutAlign='center initial '>
+  <div fxFlex='80' fxFlex.lt-md='100' class='div div__container post__container' >
+      <div fxLayoutAlign='center initial' class='div div__imageContainer'>
+        <img  class='main__image' src="https://www.issani.co.in/wall_pic/1585829272.jpg" alt="">
+      </div>
+      <div class='div div__postInfo'  fxLayout='column' fxLayoutAlign='initial center'>
+        <h1>{{post.data.title}}</h1>
+        <div class= 'author__img' [style.background-image]="'url(https://www.issani.co.in/thumbnail.php?dir=img/raghavendra-philips.jpg)'" >
+        </div>
+        <p>{{post.profile.name}}, UPDATED ON {{post.data.postedon}}</p>
+        <p>Length: 9 Minutes</p>
+      </div>
+      <div style="text-align: left;">
+        <h2>About</h2>
+        <p>{{post.profile.about}}</p>
+      </div>
+      <div style="text-align: left;">
+        <h2>Post</h2>
+        <p>{{post.data.body}}</p>
+      </div>
+  </div>
+
+</div>

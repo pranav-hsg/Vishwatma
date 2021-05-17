@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './routes/home/home.component';
+import { PostComponent } from './routes/post/post.component';
 
 const routes: Routes = [
   { 
-    path: 'Home' ,
+    path: 'home' ,
     component: HomeComponent
+  },
+  { 
+    path: 'post' ,
+    component: PostComponent
   },
   {
     path:'',
-    redirectTo: 'Home', pathMatch: 'prefix'
+    redirectTo: 'home', pathMatch: 'prefix'
   }
 ];
 
