@@ -1,0 +1,159 @@
+
+h1{
+  color:#191919;
+}
+h2{
+  color:#252525;
+}
+h3{
+  color:#323232;
+}
+h4{
+  color:#3f3f3f;
+}
+p{
+  color:#4c4c4c;
+}
+// #666666
+.div__container {
+  line-height:40px;
+  letter-spacing:1px;
+  // text-align: center;
+  // align-items: center;
+  padding: 0 20px;
+  // background-color:rgba(0, 0, 0, 0.034);
+  & .author__img{
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    background-size: cover;
+  }
+  & .div__postInfo > *{
+    margin: 10px 0;
+  }
+  
+}
+*{
+  user-select: none;
+  font-family: 'Baloo Tamma 2';
+}
+.div__imageContainer{
+  // background-color:rgba(0, 0, 0, 0.034);
+  width:100%;
+
+  & .main__image{
+
+    height:50vh;
+  }
+  
+}
+.about{
+  font-family: 'Baloo Tamma 2';
+}
+// .scrllout{
+  
+// }
+@mixin scrollout($position) {
+ 
+  position:relative;
+  
+  &[data-scroll] {
+    transition: all 1s;
+  }
+  &[data-scroll="in"] {
+    left:0;
+    opacity: 1;
+  }
+  &[data-scroll="out"] {
+    left:$position;
+    // position:relative;
+    // left:400px;
+    opacity: 0;
+  }
+}
+@for $i from 1 through 10{
+  $left:200px;
+  .scrollout:nth-child(2n+#{$i}) {
+    @if $i %2 == 0 { 
+      @include scrollout($left);
+    }@else{
+      @include scrollout(-$left);
+    }
+  }
+}
+.scrollout__fade{
+  &[data-scroll] {
+    transition: all 2s;
+  }
+  &[data-scroll="in"] {
+    opacity: 1;
+  }
+  &[data-scroll="out"] {
+    opacity: 0;
+  }
+}
+
+.invisible{
+  margin:4px;
+  color:transparent;
+}
+
+// underling 
+
+//Underline
+$und-ani-txt-color:#7d2ae8;
+$und-ani-hvr-color:#7d2ae8;
+$und-ani-und-color:#414141;
+$und-ani-und-height:4px;
+$und-ani-delay-time:0s;
+$und-ani-real-time:2s;
+#headingFeature{
+  display:inline-block;
+  position: relative;
+  // color: $und-ani-txt-color;
+  text-decoration: none;
+}
+
+// #headingFeature:hover {
+//   color: $und-ani-hvr-color;
+// }
+#headingFeature::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: $und-ani-und-height;
+  bottom: 0;
+  left: 0;
+  background-color:$und-ani-und-color;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+
+}
+.scrollout[data-scroll="in"] #headingFeature::before{
+  animation:underline-ani $und-ani-real-time $und-ani-delay-time forwards;
+}
+// #headingFeature:hover::before {
+//   visibility: visible;
+//   transform: scaleX(1);
+// }
+@keyframes underline-ani{
+  0%{
+    visibility: hidden;
+    transform: scaleX(0);
+  }
+  
+  100%{
+    visibility:visible;
+    transform: scaleX(1);
+  }
+}
+// 50%{
+//   visibility: visible;
+//   transform: scaleX(1);
+// }
+
+.body-content {
+  white-space: pre-line;
+}
