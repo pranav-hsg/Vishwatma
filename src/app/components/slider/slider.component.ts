@@ -9,8 +9,9 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
 })
 export class SliderComponent implements OnInit {
   @ViewChild('slickModal', { static: true }) slickModal: any
-  slides = [{title:'', img:''}];
-  slideConfig = {"slidesToShow": 5, "slidesToScroll": 5, "centerPadding": 40};
+  slides = [{title:'', img:'', redirection: ''}];
+  currentSlide = 0
+  slideConfig = {"slidesToShow": 7, "slidesToScroll": 7, "centerPadding": 40};
   lastgetSliderLength:any;
   isLoading:boolean = false;
 
@@ -19,23 +20,29 @@ export class SliderComponent implements OnInit {
     const lastObj = this.slides[this.slides.length -1]
     this.slickModal.slickNext();
     if(this.lastgetSliderLength !== 0){
-      this.sliderService.getNextSlide(lastObj).subscribe((getNextSlideData:any) => {
-        this.lastgetSliderLength = getNextSlideData.length;
-        if(getNextSlideData.length > 0) {
-          getNextSlideData.forEach((element:any) => {
-            this.slides.push(element)
-          });
-        }
-        this.isLoading = false;
-      }, error => {
-         this.isLoading = false;
-      });
+      const lastMemoizedObj = this.slides[this.slides.length -1 ]
+      if((+lastMemoizedObj.redirection - +lastObj.redirection) < 7 ) {
+        this.sliderService.getNextSlide(lastObj).subscribe((getNextSlideData:any) => {
+          this.lastgetSliderLength = getNextSlideData.length;
+          if(getNextSlideData.length > 0) {
+            getNextSlideData.forEach((element:any) => {
+              this.slides.push(element)
+              this.currentSlide++
+            });
+          }
+          this.isLoading = false;
+        }, error => {
+           this.isLoading = false;
+        });
+      }
+      
     }
     
   }
   
   prev() {
     this.slickModal.slickPrev();
+    this.currentSlide = this.currentSlide > 1 ? this.currentSlide-- : this.currentSlide
   }
   constructor(private sliderService:SliderService) { 
     this.sliderService.getSliderContent().subscribe((sliderData:any)=>{
