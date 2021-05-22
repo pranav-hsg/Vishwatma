@@ -1,1 +1,23 @@
-<p>slider works!</p>
+
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+>
+
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+<div (click)="open()">
+    <img src="https://www.issani.co.in/thumbnail.php?dir={{slide.img }}" width="" >
+
+<div class="title"> {{slide.title}} </div>
+
+</div>
+</div>
+
+
+</ngx-slick-carousel>
+
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<button mat-button (click)="prev()">Prev</button>
+<mat-spinner *ngIf="isLoading === true" [diameter] = '20'></mat-spinner>
+<button mat-button (click)="next()" [disabled]="isLoading === true">Next</button>
+</div>

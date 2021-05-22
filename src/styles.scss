@@ -1,6 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+.slick-slider {
+    width: 88%;
+    margin: auto;
+  }
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: 0px !important;
+    justify-content: center;
+}
+  
+// body .slick-prev, 
+// body .slick-next {
+//     height: 25px;
+//     width: 20px;
+//     background: grey !important;
+//     color: grey;
+//     z-index: 100;
+// }
 
 *{
     margin:0;
