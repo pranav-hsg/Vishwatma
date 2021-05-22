@@ -1,0 +1,263 @@
+h1 {
+  color: #191919;
+}
+
+h2 {
+  color: #252525;
+}
+
+h3 {
+  color: #323232;
+}
+
+h4 {
+  color: #3f3f3f;
+}
+
+p {
+  color: #4c4c4c;
+}
+
+.div__container {
+  line-height: 40px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+}
+
+.div__container .author__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.div__container .div__postInfo > * {
+  margin: 10px 0;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Baloo Tamma 2';
+}
+
+.div__imageContainer {
+  width: 100%;
+}
+
+.div__imageContainer .main__image {
+  height: 50vh;
+}
+
+.about {
+  font-family: 'Baloo Tamma 2';
+}
+
+.scrollout:nth-child(2n+1) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+1)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+1)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+1)[data-scroll="out"] {
+  left: -200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+2) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+2)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+2)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+2)[data-scroll="out"] {
+  left: 200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+3) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+3)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+3)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+3)[data-scroll="out"] {
+  left: -200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+4) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+4)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+4)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+4)[data-scroll="out"] {
+  left: 200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+5) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+5)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+5)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+5)[data-scroll="out"] {
+  left: -200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+6) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+6)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+6)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+6)[data-scroll="out"] {
+  left: 200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+7) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+7)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+7)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+7)[data-scroll="out"] {
+  left: -200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+8) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+8)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+8)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+8)[data-scroll="out"] {
+  left: 200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+9) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+9)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+9)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+9)[data-scroll="out"] {
+  left: -200px;
+  opacity: 0;
+}
+
+.scrollout:nth-child(2n+10) {
+  position: relative;
+}
+
+.scrollout:nth-child(2n+10)[data-scroll] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.scrollout:nth-child(2n+10)[data-scroll="in"] {
+  left: 0;
+  opacity: 1;
+}
+
+.scrollout:nth-child(2n+10)[data-scroll="out"] {
+  left: 200px;
+  opacity: 0;
+}
+
+.scrollout__fade[data-scroll] {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.scrollout__fade[data-scroll="in"] {
+  opacity: 1;
+}
+
+.scrollout__fade[data-scroll="out"] {
+  opacity: 0;
+}
+/*# sourceMappingURL=post.component.css.map */

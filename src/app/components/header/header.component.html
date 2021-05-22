@@ -1,1 +1,75 @@
-<p>header works!</p>
+<div  fxFlex='100' class='div div__header mat-typography' fxLayout = 'row' fxLayoutAlign="initial center" >
+
+    <!-- these are all heading text -->
+    <h2 class=' h2__logotext headline'>ಇಸ್ಸನಿ</h2>
+    <div fxHide.lt-sm fxHide.sm  fxLayout = 'row' fxLayoutAlign="initial center" >
+      
+      <div *ngFor="let menu of menus; let index = index" class='dropdown1 opn'>
+        <div   class='icon'> <span>{{menu.heading}}</span>
+           <i class="fa fa-angle-down"></i> </div>
+        <li class='dropdownItems1'>
+          <hr class='horizontalRow2'>
+          <ul>
+            <div class='liContainer' *ngFor="let submenu of menu.submenu; let index = index">
+             
+              <li>{{submenu.name}}</li>
+            </div>
+          </ul>
+        </li>
+        
+    </div>
+    </div>
+    <button fxHide.lt-sm fxHide.sm  class="secondary_color primary_font btn btn__login" mat-stroked-button>Login</button>
+    <button fxHide.lt-sm fxHide.sm secondary_color mat-flat-button class='primary_color primary_font btn'>Sign Up</button>
+    <button style="margin-left: auto;" #menu (click)='toggleMenu()' fxHide.gt-sm  class='btn__menuicon'>
+        <img class="menuIcon" src=".\assets\icons\menu.svg" alt="">
+    </button>
+</div>
+
+<div [ngClass]="{'showMenu': showMenu,'menu':'true'} "  fxHide.gt-sm  >
+
+
+    <div #bgDark class="bgDark" >
+
+        
+    </div>
+<div  class="sideMenu" fxLayout = 'column' fxLayoutAlign="initial center" >
+    
+    <div fxFlex='100'  fxLayout = 'column' fxLayoutAlign="start start" >
+        <div class='div__dropDown'>
+
+        </div>
+        
+        <div *ngFor="let menu of menus; let index = index" class='drowndown'>
+          <div (click)='toggleDropdown($event)'  class='icon'> <span>{{menu.heading}}</span>
+             <i class="fa fa-angle-down"></i> </div>
+          <li class='dropdownItems'>
+            <hr class='horizontalRow2'>
+            <ul>
+              <div class='liContainer' *ngFor="let submenu of menu.submenu; let index = index">
+                <hr *ngIf='index!=0' class='horizontalRow2'>
+                <li>{{submenu.name}}</li>
+              </div>
+            </ul>
+          </li>
+          <hr class='horizontalRow'>
+      </div>
+    
+        
+        
+      </div>
+      <button   (click)='toggleMenu()' fxHide.gt-sm  class='btn__closeIcon'>
+        <img class="closeIcon" src=".\assets\icons\close.svg" alt="">
+     </button>
+      <div class='signup buttons' fxFlex fxLayoutAlign="space-between flex-end" style='margin-top:auto;margin-bottom:10px'>
+
+        <button   fxHide.gt-sm class="secondary_color primary_font btn btn__login" mat-stroked-button>Login</button>
+        <button fxHide.gt-sm secondary_color mat-flat-button class='primary_color primary_font btn'>Sign Up</button>
+      </div>
+</div>
+
+
+</div>
+<div style='width:100%;height: 62px'>
+  <!-- this is to fill place same as header height -->
+</div>
