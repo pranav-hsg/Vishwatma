@@ -1,23 +1,28 @@
-<div fxLayout = 'row wrap'   fxFlex='100' fxLayoutAlign='center initial '>
-  <div fxFlex='80' fxFlex.lt-md='100' class='div div__container post__container' >
+<div *ngIf='post?.data' fxLayout = 'row wrap'   fxFlex='100' fxLayoutAlign='center initial '>
+  <div fxFlex='60' fxFlex.lt-md='100' class='div div__container post__container' >
       <div fxLayoutAlign='center initial' class='div div__imageContainer'>
-        <img  class='main__image' src="https://www.issani.co.in/wall_pic/1585829272.jpg" alt="">
+        <img  class='main__image' src='https://www.issani.co.in/{{post.data.img}}' alt="">
+        <!-- "https://www.issani.co.in/wall_pic/1585829272.jpg" -->
       </div>
-      <div class='div div__postInfo'  fxLayout='column' fxLayoutAlign='initial center'>
+      <div class='div div__postInfo scrollout__fade'  fxLayout='column' fxLayoutAlign='initial center'>
         <h1>{{post.data.title}}</h1>
-        <div class= 'author__img' [style.background-image]="'url(https://www.issani.co.in/thumbnail.php?dir=img/raghavendra-philips.jpg)'" >
+        <div class= 'author__img' [ngStyle]="{ 'background-image': 'url(' + 'https://www.issani.co.in/'+post.profile.pic + ')'}" >
         </div>
-        <p>{{post.profile.name}}, UPDATED ON {{post.data.postedon}}</p>
-        <p>Length: 9 Minutes</p>
+        <p>{{post.profile.name}} | ನವೀಕರಿಸಲಾದ ದಿನಾಂಕ  {{post.data.postedon}}</p>
+        <p>ಉದ್ದ: ೯ ನಿಮಿಷಗಳು</p>
       </div>
-      <div style="text-align: left;">
-        <h2>About</h2>
-        <p>{{post.profile.about}}</p>
+      <div  class='about scrollout' style="text-align: left;">
+        <h2 id='headingFeature' >ಬಗ್ಗೆ<hr class="invisible"></h2>
+        <p >{{post.profile.about}}</p>
       </div>
-      <div style="text-align: left;">
-        <h2>Post</h2>
-        <p>{{post.data.body}}</p>
+      <div class='post scrollout' style="text-align: left;">
+        <h2 id='headingFeature' >ಪೋಸ್ಟ್<hr class="invisible"> </h2>
+        <p >{{post.data.body}}</p>
       </div>
   </div>
 
+</div>
+<div *ngIf='!post?.data'>
+
+    <p>Loading</p>
 </div>

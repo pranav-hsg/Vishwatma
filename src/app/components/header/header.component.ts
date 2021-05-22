@@ -77,8 +77,8 @@ export class HeaderComponent implements OnInit {
   toggleMenu( ){
     this.showMenu = !this.showMenu
   }
+  
   toggleDropdown(e:any){
-    console.log( e.target.parentNode.classList, e.target.parentNode, e.target)
     e.target.parentNode.classList.toggle('open');
     e.target.parentNode.parentNode.classList.toggle('open')
   }

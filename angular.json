@@ -33,7 +33,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/scroll-out/dist/scroll-out.min.js"]
           },
           "configurations": {
             "production": {
