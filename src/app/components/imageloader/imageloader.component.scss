@@ -1,0 +1,30 @@
+
+.div__mainContainer{
+  display:inline-block;
+}
+.imageContainer,.imageContainer img{
+  width:240px;
+  height:240px;
+}
+.imageContainer img.loading{
+  animation: bgColorAnimaion 1s infinite cubic-bezier(.17,.67,.83,.67);
+  background-image: url("/assets/icons/img_holder.svg");
+}
+@keyframes bgColorAnimaion{
+  from{
+    background-color:white;
+  }
+  50%{
+    background-color:black;
+  }
+  to{
+    background-color:white;
+  }
+}
+.p.p__imgTitle{
+  margin:0;
+  font: Helvetica,Arial,sans-serif;
+  line-height:32px;
+  font-size:16px;
+  font-weight:600;
+}
