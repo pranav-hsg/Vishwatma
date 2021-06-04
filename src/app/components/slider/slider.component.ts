@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { SliderService } from 'src/app/services/slider/slider.service';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, OnChanges } from '@angular/core';
+
 
 @Component({
   selector: 'app-slider',
@@ -8,60 +7,75 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  @ViewChild('slickModal', { static: true }) slickModal: any
-  slides = [{title:'', img:'', redirection: ''}];
-  currentSlide = 0
-  slideConfig = {"slidesToShow": 7, "slidesToScroll": 7, "centerPadding": 40};
-  lastgetSliderLength:any;
-  isLoading:boolean = false;
+  @Output() loadMore = new EventEmitter<string>();
+  @Input() sliderData = [];
+  numberOfRightSwipes = 0
+  completeSliderData = []
+  appearingSlider = []
+  requestedForData = false
+  stopLoading = false
+  scrollPos = 1
 
-  next() {
-    this.isLoading = true;
-    const lastObj = this.slides[this.slides.length -1]
-    this.slickModal.slickNext();
-    if(this.lastgetSliderLength !== 0){
-      const lastMemoizedObj = this.slides[this.slides.length -1 ]
-      if((+lastMemoizedObj.redirection - +lastObj.redirection) < 7 ) {
-        this.sliderService.getNextSlide(lastObj).subscribe((getNextSlideData:any) => {
-          this.lastgetSliderLength = getNextSlideData.length;
-          if(getNextSlideData.length > 0) {
-            getNextSlideData.forEach((element:any) => {
-              this.slides.push(element)
-              this.currentSlide++
-            });
-          }
-          this.isLoading = false;
-        }, error => {
-           this.isLoading = false;
-        });
-      }
-      
+  ngOnInit() {
+
+  }
+/**
+ * TODO: Pranav - clean up the code.
+ */
+  ngOnChanges() {
+    console.log('changed', this.sliderData)
+
+    if (this.sliderData.length == 0) { this.stopLoading = true } else {
+      this.stopLoading = false
     }
-    
-  }
-  
-  prev() {
-    this.slickModal.slickPrev();
-    this.currentSlide = this.currentSlide > 1 ? this.currentSlide-- : this.currentSlide
-  }
-  constructor(private sliderService:SliderService) { 
-    this.sliderService.getSliderContent().subscribe((sliderData:any)=>{
-       console.log(sliderData)
-       this.slides = sliderData.posts;
-    }, error=>{
-       console.log(error);
-    })
-    console.log('window', window);
-    if(window.outerWidth < 420){
-      this.slideConfig = {"slidesToShow": 2, "slidesToScroll": 2, "centerPadding": 40};
+    this.completeSliderData = this.completeSliderData.concat(this.sliderData || [])
+    const startingFrom = (this.numberOfRightSwipes * 5) && (this.numberOfRightSwipes * 5 - 1)
+    if (window.innerWidth > 600) {
+      this.appearingSlider = this.completeSliderData.slice(startingFrom, startingFrom + 5)
+    } else {
+      this.appearingSlider = this.completeSliderData
     }
+    this.requestedForData = false
   }
 
-  ngOnInit(): void {
+  loadNext() {
+    this.numberOfRightSwipes++
+    const startingFrom = (this.numberOfRightSwipes * 5) && (this.numberOfRightSwipes * 5 - 1)
+    if ((this.completeSliderData.length - startingFrom) < 5) {
+      this.loadMore.emit()
+    }
+    setTimeout(() => {
+      this.appearingSlider = this.completeSliderData.slice(startingFrom, startingFrom + 5)
+
+    }, 100)
   }
 
-  open() {
-    console.log('open')
+  loadPrev() {
+    if (this.numberOfRightSwipes <= 1) {
+      return
+    }
+    this.numberOfRightSwipes--
+
+    const startingFrom = (this.numberOfRightSwipes * 5) && (this.numberOfRightSwipes * 5 - 1)
+    setTimeout(() => {
+      this.appearingSlider = this.completeSliderData.slice(startingFrom, startingFrom + 5)
+
+    }, 100)
+
+  }
+
+  swipping(e: any): any {
+    if (this.stopLoading) {
+      return false
+    }
+    if (this.requestedForData) {
+      return false
+    }
+    if (((e.target.scrollWidth - e.target.scrollLeft) < window.innerWidth + 50)) {
+      this.requestedForData = true
+      this.numberOfRightSwipes++
+      this.loadMore.emit()
+    }
   }
 
 }
