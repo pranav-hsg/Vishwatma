@@ -1,13 +1,24 @@
 .img {
     width: 240px;
-    height: auto;
+    height: 240px;
     margin: 16px;
 }
 
 .slider-container {
     display: flex;
+    height: 240px;
     width: 100vw;
     justify-content: center;
+}
+
+.slider-container.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: red;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: #ccc;
 }
 
 .nav-btn {

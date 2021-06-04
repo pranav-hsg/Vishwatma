@@ -23,8 +23,10 @@ export class HomeComponent implements OnInit {
   }
 
   loadMore(){
-    debugger
-    this.authors = [...this.authors]
+    setTimeout(()=>{
+      this.authors = []
+
+    }, 1000)
   }
 
 }

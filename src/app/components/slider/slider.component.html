@@ -1,9 +1,12 @@
-<div class="slider-container" (scroll)="swipping($event)">
+<div class="slider-container" *ngIf="appearingSlider.length" (scroll)="swipping($event)">
     <div class="nav-btn" (click)="loadPrev()"><img src="assets/icons/prev.svg" alt=""></div>
 
     <div class="slider-card" *ngFor="let data of appearingSlider">
-        <img src="https://issani.co.in/thumbnail.php?dir={{data['img']}}" class="img" alt="slider image">
+        <img src="https://issani.co.in/thumbnail.php?dir={{data['img']}}" class="img" alt="slider image" imageLoader>
     </div>
 
     <div class="nav-btn" (click)="loadNext()"><img src="assets/icons/next.svg" alt=""></div>
+</div>
+<div *ngIf="!appearingSlider.length" class="slider-container error">
+    Loading!
 </div>
