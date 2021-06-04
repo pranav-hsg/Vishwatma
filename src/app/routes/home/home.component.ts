@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   homeData: any = {}
   authors = []
+  bannerImageUrl:string='https://static.canva.com/marketplace/banners/Temp-MP-Banner_OCT19_Logo-Green_V1-%40x2.jpg';
   constructor(private sliderService: SliderService) { }
 
   ngOnInit(): void {

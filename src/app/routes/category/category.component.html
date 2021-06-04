@@ -1,1 +1,14 @@
-<p>category works!</p>
+
+<app-banner [bgImageUrl]='bannerImageUrl'>
+  
+  <div fxLayout='column'  class="div div__contentContainer">
+       <h1 class='mat-display-2'>Logo Templates</h1>
+       <p>No business is complete without a logo. Design your own by customizing one of Canva's professionally made logo templates with the help of our intuitive editing tools.</p>
+  </div>
+</app-banner>
+<div class="div div__cardContainer">
+  <div class="div div__card" *ngFor="let imageLoader of imageLoaderData" >
+    <app-imageloader  [imageLoader]="imageLoader" ></app-imageloader>
+  </div>
+</div>
+<p>{{text}}</p>

@@ -68,7 +68,8 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     border:0;
     width: 30px;
     height: 30px;
-    background-color: 0;
+    background-color:white;
+    border-radius:3px;
     font-size:16px;
 }
 .menuIcon{
@@ -325,5 +326,11 @@ $open-sans: 'Open Sans', sans-serif;
     }
     &.open .icon i,&:hover .icon i,& .icon:hover i{
         transform: rotate(-180deg);
+    }
+}
+
+@-moz-document url-prefix() {
+    body div.div.div__header{
+        background-color: rgba(255, 255, 255, 0.883);
     }
 }
