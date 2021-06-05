@@ -4,3 +4,18 @@
     color: gray;
     font-size: small;
 }
+ img.loading{
+    animation: bgColorAnimaion 1s infinite cubic-bezier(.17,.67,.83,.67);
+    background-image: url("../../../assets/icons/img_holder.svg");
+  }
+  @keyframes bgColorAnimaion{
+    from{
+      background-color:white;
+    }
+    50%{
+      background-color:black;
+    }
+    to{
+      background-color:white;
+    }
+  }

@@ -28,8 +28,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Baloo Tamma 2';
 }
 body{
+   
     height: 300vh;
     h1{
         color:#191919;
@@ -46,6 +48,9 @@ body{
     p{
         color:#4c4c4c;
     }
+}
+html body{
+    background-color: #fdf9f5;
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

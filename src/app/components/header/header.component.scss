@@ -7,8 +7,8 @@ html,body{
     width: 100%;
     // background-color:white;
     // background-color: rgb(255 255 255 / 54%); 
-    background-color:rgba(175,153,129 , 91%);
-    backdrop-filter: blur(15px);
+    background-color: rgba(121, 85, 72,0.9);
+    backdrop-filter: blur(8px);
     z-index: 100;
     user-select: none;
     height:60px;
@@ -347,14 +347,15 @@ $open-sans: 'Open Sans', sans-serif;
 .issani__menu{
     display:flex;
     flex-direction: row;
-
+    margin-right: 20px;
 
     .issani__menu--items{
         margin-left: 20px;
+        cursor: pointer;
         color:white;
     }
     .issani__menu--items:hover{
-        color:chartreuse;
+        color:rgb(226, 219, 211);
     }
 }
 .issani__sidemenu{
@@ -370,4 +371,12 @@ $open-sans: 'Open Sans', sans-serif;
     .issani__sidemenu--items:hover{
         color:rgba(175, 153, 129, 0.91);
     }
+}
+.h2__logotext1{
+    margin:0;
+    width:101px;
+    margin-top: 10px;
+}
+.ml{
+    margin-left:auto;
 }
