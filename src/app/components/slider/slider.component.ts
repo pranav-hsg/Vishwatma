@@ -25,7 +25,7 @@ export class SliderComponent implements OnInit {
   ngOnChanges() {
     console.log('changed', this.sliderData)
 
-    if (this.sliderData.length == 0) { 
+    if (this.sliderData && this.sliderData.length == 0) { 
       this.stopLoading = true;
       this.numberOfRightSwipes = 0
      } else {

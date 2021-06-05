@@ -9,12 +9,10 @@ export class SliderService {
   constructor(private httpClient:HttpClient) { }
 
   getSliderContent(){
-    const url = 'http://34.67.33.183/home';
-    return this.httpClient.get(url);
   }
 
-  getNextSlide(lastObj:any){
-    const url = 'http://34.67.33.183/home/posts/'+lastObj.redirection+'/7';
+  loadData(route: string, startFrom: string, limit: string) {
+    const url = `http://34.67.33.183/home/${route}/${startFrom}/${limit}`;
     return this.httpClient.get(url);
   }
 }

@@ -3,6 +3,7 @@
 
     <div class="slider-card" *ngFor="let data of appearingSlider">
         <img src="https://issani.co.in/thumbnail.php?dir={{data['img']}}" class="img" alt="slider image" imageLoader>
+        <span class="label">{{data?.title}}</span>
     </div>
 
     <div class="nav-btn" (click)="loadNext()"><img src="assets/icons/next.svg" alt=""></div>

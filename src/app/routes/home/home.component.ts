@@ -9,24 +9,28 @@ import {SliderService} from './../../services/slider/slider.service'
 })
 export class HomeComponent implements OnInit {
 
-  homeData: any = {}
+  latestArticles:any
   authors = []
+  ankanas = []
+
   bannerImageUrl:string='https://static.canva.com/marketplace/banners/Temp-MP-Banner_OCT19_Logo-Green_V1-%40x2.jpg';
   constructor(private sliderService: SliderService) { }
 
   ngOnInit(): void {
-    
-    this.sliderService.getSliderContent().subscribe(data =>{
-      this.homeData = data
-      this.authors = this.homeData.posts
+    this.sliderService.loadData('posts', '-1', '10').subscribe((data=[]) => {
+      console.log(data)
+      this.latestArticles = data
     })
+    
+    // this.homeData = this.sliderService.getSliderContent()
   }
 
-  loadMore(){
-    setTimeout(()=>{
-      this.authors = []
-
-    }, 1000)
+  loadMoreLatestArticles(){
+    const lastId = this.latestArticles[this.latestArticles.length - 1].redirection
+    this.sliderService.loadData('posts', lastId, '10').subscribe((data=[]) => {
+      console.log(data)
+      this.latestArticles = data
+    })
   }
 
 }

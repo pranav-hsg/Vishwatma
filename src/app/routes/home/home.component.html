@@ -1,6 +1,5 @@
 
 <app-banner [bgImageUrl]='bannerImageUrl'>
-  
     <div fxLayout='column' fxLayoutAlign='center center' class="div div__contentContainer">
          <h1 class='mat-display-2'>ಇಸ್ಸನಿ</h1>
          <div class='searchBox__container'>
@@ -11,7 +10,8 @@
     </div>
 </app-banner>
 
-<app-slider [sliderData]="authors" (loadMore)="loadMore()"></app-slider>
+<app-slider [sliderData]="latestArticles" (loadMore)="loadMoreLatestArticles()"></app-slider>
+
 
 
 

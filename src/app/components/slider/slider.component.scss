@@ -1,7 +1,19 @@
 .img {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+}
+
+.label {
     width: 240px;
-    height: 240px;
-    margin: 16px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: gray;
+}
+
+.slider-card {
+    width: calc((100vw / 5) - 10px);
 }
 
 .slider-container {
@@ -32,9 +44,13 @@
 
 @media(max-width: 600px) {
     .img {
-        width: calc((100vw - 90px) / 2);
+        width: calc((100vw - 20px) / 2);
         height: auto;
         margin: 16px;
+    }
+
+    .slider-card {
+        width: calc(100vw / 2);
     }
 
     .slider-container {
