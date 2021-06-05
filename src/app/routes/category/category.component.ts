@@ -10,51 +10,51 @@ export class CategoryComponent implements OnInit {
   text='Loading'
   imageLoaderData = [
     {
-      imgSrc:'https://picsum.photos/240',
+      imgSrc:'https://picsum.photos/200/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/241',
+      imgSrc:'https://picsum.photos/200/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/242',
+      imgSrc:'https://picsum.photos/200/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/243',
+      imgSrc:'https://picsum.photos/200/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/244',
+      imgSrc:'https://picsum.photos/400/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/245',
+      imgSrc:'https://picsum.photos/300/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/246',
+      imgSrc:'https://picsum.photos/500/300.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/247',
+      imgSrc:'https://picsum.photos/400/200.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/248',
+      imgSrc:'https://picsum.photos/400/800.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/249',
+      imgSrc:'https://picsum.photos/500/500.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/239',
+      imgSrc:'https://picsum.photos/200/100.jpg',
       imgText:'This is dummy'
     },
     {
-      imgSrc:'https://picsum.photos/238',
+      imgSrc:'https://picsum.photos/200/200.jpg',
       imgText:'This is dummy'
     }
   ]
