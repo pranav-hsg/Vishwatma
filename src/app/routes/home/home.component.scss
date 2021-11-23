@@ -74,3 +74,9 @@
       }
   }
 }
+.bgIcon{
+  width:20px;
+  height:20px;
+  mask: url('/assets/icons/close.svg');
+  background-color: purple;
+}

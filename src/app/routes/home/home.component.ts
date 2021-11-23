@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
     
     // this.homeData = this.sliderService.getSliderContent()
   }
+  
 
   loadMoreLatestArticles(){
     const lastId = this.latestArticles[this.latestArticles.length - 1].redirection

@@ -84,18 +84,20 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     min-height:calc(100%);
     position: fixed;
     background-color:white;
-    right:0;
+    top:0;
     width: 240px;
     z-index: 101;
-}
-.bgDark{
-    position:fixed;
-    left:0;
-    width: calc(100%);
-    height: calc(100%);
-    background-color:rgba(47, 47, 47, 0.281);
-    z-index: 50;
-}
+    transition:right 0.4s ease-in;
+    outline: rgba(0,0,0,.2) solid 100vw;
+} 
+// .bgDark{
+//     position:fixed;
+//     left:0;
+//     width: calc(100%);
+//     height: calc(100%);
+//     background-color:rgba(47, 47, 47, 0.281);
+//     z-index: 50;
+// }
 .btn__closeIcon{
     all:unset;
     user-select: none;
@@ -103,16 +105,32 @@ box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.19);
     position:absolute;
     left:0;
     top:0; 
+    :hover{
+        // Put color to svg without touching svg
+        filter: invert(20%) sepia(93%) saturate(6805%) hue-rotate(3deg) brightness(107%) contrast(103%);
+    }
 }
-div.menu{
-    visibility: hidden;
-    opacity: 0;
+// div.menu{
+
     
+// }
+div.hideMenu{
+    .sideMenu{
+        visibility: hidden;
+        opacity: 0;
+        outline:0;
+        transition:right 0.4s ease-out,
+        opacity 20s cubic-bezier(.37,.73,.95,.33),
+        visibility 20s cubic-bezier(.37,.73,.95,.33);
+        right:-240px;
+    }
 }
 div.showMenu{
-    visibility:visible;
-    opacity: 1;
-    transition: visibility 1s;  
+    .sideMenu{   
+        visibility:visible;
+        opacity: 1;
+        right:0;
+    }
 }
 .horizontalRow{
     margin:0;
@@ -330,11 +348,11 @@ $open-sans: 'Open Sans', sans-serif;
     }
 }
 
-@-moz-document url-prefix() {
-    body div.div.div__header{
-        background-color: rgba(255, 255, 255, 0.883);
-    }
-}
+// @-moz-document url-prefix() {
+//     body div.div.div__header{
+//         background-color: rgba(255, 255, 255, 0.883);
+//     }
+// }
 // .h2__logotext1{
 //     background-color:rgba(255, 182, 182, 0.856);
 //     line-height:40px;

@@ -1,5 +1,6 @@
 <div [ngStyle.lt-sm]="{'padding': '0'}"  fxFlex='100' class='div div__bannerContainer mat-typography'  fxLayoutAlign="initial center" >
-    <div [ngStyle.lt-sm]="{'border-radius':'0px','background-image': 'url(' + bgImageUrl + ')'}"  fxFlex='100' class='div div__banner'  [ngStyle]="{'background-image': 'url(' + bgImageUrl + ')'}"  >
+    <div id="rainday" [ngStyle.lt-sm]="{'border-radius':'0px','background-image': 'url(' + bgImageUrl + ')'}"  fxFlex='100' class='div div__banner'  [ngStyle]="{'background-image': 'url(' + bgImageUrl + ')'}"  >
+       
         <div  fxLayout = 'column'  class="div div__transparent">
             <ng-content select='.div__contentContainer'></ng-content>
         </div>

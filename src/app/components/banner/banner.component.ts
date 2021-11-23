@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+declare var Rainyday:any;
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -11,6 +11,14 @@ export class BannerComponent implements OnInit {
   
   ngOnInit(): void {
   }
+  ngAfterViewInit(){
+    
+  }
+  thunder(){
+    // let img=document.getElementById('rainyday')
+    // var rainyDay = new RainyDay({image: img})
+  }
+
   // debounce(cb, interval, immediate) {
   //   var timeout;
   
