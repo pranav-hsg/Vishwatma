@@ -1,31 +1,15 @@
-<div
-  fxFlex="100"
-  class="div div__header mat-typography"
-  fxLayout="row"
-  fxLayoutAlign="initial center"
->
+<div fxFlex="100" class="div div__header mat-typography" fxLayout="row" fxLayoutAlign="initial center">
   <!-- these are all heading text -->
   <!-- <h2 class=' h2__logotext headline'>ಇಸ್ಸನಿ</h2> -->
   <h6 class="h2__logotext1">
     <a href="http://localhost:4200/home" style="text-decoration: none"
       >&nbsp;
-      <div style="color: red; font-size: 35px; display: inline-block">ಇ</div>
-      <div style="color: white; font-size: 35px; display: inline-block">
-        ಸ್ಸ
-      </div>
-      <div style="color: yellow; font-size: 35px; display: inline-block">
-        ನಿ...
-      </div>
+      <div style="color: red; font-size: 35px; display: inline-block">h</div>
+      <div style="color: white; font-size: 35px; display: inline-block">o</div>
+      <div style="color: yellow; font-size: 35px; display: inline-block">st</div>
     </a>
   </h6>
-  <div
-    class="ml"
-    fxGrow="1"
-    fxHide.lt-sm
-    fxHide.sm
-    fxLayout="row"
-    fxLayoutAlign="initial center"
-  >
+  <div class="ml" fxGrow="1" fxHide.lt-sm fxHide.sm fxLayout="row" fxLayoutAlign="initial center">
     <!--add tis to above div!!!!! -> fxLayoutAlign="initial center" -->
 
     <!-- <div *ngFor="let menu of menus; let index = index" class='dropdown1 opn'>
@@ -43,7 +27,16 @@
         
     </div> -->
     <div class="issani__menu">
-      <span class="span__issani issani__menu--items">ಮುಖ ಪುಟ </span>
+      <span class="span__issani issani__menu--items">Home</span>
+
+      <span class="span__issani issani__menu--items">Podcast</span>
+      <span class="span__issani issani__menu--items">Write for Us</span>
+      <span class="span__issani issani__menu--items">Diwali Article Competition</span>
+      <span class="span__issani issani__menu--items">Contributors</span>
+      <span class="span__issani issani__menu--items">Weather</span>
+      <span class="span__issani issani__menu--items">About Us</span>
+      <span class="span__issani issani__menu--items">Contact</span>
+      <!-- <span class="span__issani issani__menu--items">ಮುಖ ಪುಟ </span>
 
       <span class="span__issani issani__menu--items">ಪಾಡ್ಕಾಸ್ಟ್</span>
       <span class="span__issani issani__menu--items">ನೀವೂ ಬರೆಯಿರಿ</span>
@@ -51,23 +44,17 @@
       <span class="span__issani issani__menu--items">ಮಳೆಗರೆದವರು</span>
       <span class="span__issani issani__menu--items">ಅಂಕಣಗಳು</span>
       <span class="span__issani issani__menu--items">ನಮ್ಮ್ ಬಗ್ಗೆ</span>
-      <span class="span__issani issani__menu--items">ಸಂಪರ್ಕಿಸಿ</span>
+      <span class="span__issani issani__menu--items">ಸಂಪರ್ಕಿಸಿ</span> -->
     </div>
   </div>
   <!-- <button fxHide.lt-sm fxHide.sm  class="secondary_color primary_font btn btn__login" mat-stroked-button>Login</button>
     <button fxHide.lt-sm fxHide.sm secondary_color mat-flat-button class='primary_color primary_font btn'>Sign Up</button> -->
-  <button
-    style="margin-left: auto"
-    #menu
-    (click)="toggleMenu()"
-    fxHide.gt-sm
-    class="btn__menuicon"
-  >
+  <button style="margin-left: auto" #menu (click)="toggleMenu()" fxHide.gt-sm class="btn__menuicon">
     <img class="menuIcon" src=".\assets\icons\menu.svg" alt="" />
   </button>
 </div>
 
-<div [ngClass]="{ showMenu : showMenu , hideMenu : !showMenu}" class= 'menu' fxHide.gt-sm>
+<div [ngClass]="{ showMenu: showMenu, hideMenu: !showMenu }" class="menu" fxHide.gt-sm>
   <!-- <div #bgDark class="bgDark"></div> -->
   <div class="sideMenu" fxLayout="column" fxLayoutAlign="initial center">
     <div fxFlex="100" fxLayout="column" fxLayoutAlign="start start">
@@ -96,9 +83,7 @@
         <hr class="horizontalRow" />
         <span class="span__issani issani__sidemenu--items">ನೀವೂ ಬರೆಯಿರಿ</span>
         <hr class="horizontalRow" />
-        <span class="span__issani issani__sidemenu--items"
-          >ದೀಪಾವಳಿ ಬರಹ ಸ್ಪರ್ಧೆ</span
-        >
+        <span class="span__issani issani__sidemenu--items">ದೀಪಾವಳಿ ಬರಹ ಸ್ಪರ್ಧೆ</span>
         <hr class="horizontalRow" />
         <span class="span__issani issani__sidemenu--items">ಮಳೆಗರೆದವರು</span>
         <hr class="horizontalRow" />
@@ -113,12 +98,7 @@
     <button (click)="toggleMenu()" fxHide.gt-sm class="btn__closeIcon">
       <img class="closeIcon" src=".\assets\icons\close.svg" alt="" />
     </button>
-    <div
-      class="signup buttons"
-      fxFlex
-      fxLayoutAlign="space-between flex-end"
-      style="margin-top: auto; margin-bottom: 10px"
-    >
+    <div class="signup buttons" fxFlex fxLayoutAlign="space-between flex-end" style="margin-top: auto; margin-bottom: 10px">
       <!-- <button   fxHide.gt-sm class="secondary_color primary_font btn btn__login" mat-stroked-button>Login</button>
         <button fxHide.gt-sm secondary_color mat-flat-button class='primary_color primary_font btn'>Sign Up</button> -->
     </div>

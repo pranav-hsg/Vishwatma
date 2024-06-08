@@ -1,6 +1,9 @@
 {
   "name": "vishwatma",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=10.24.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
